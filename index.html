@@ -354,8 +354,25 @@
 <li>使用markdown编辑</li>
 <li>博客主题丰富</li>
 </ul>
-<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><h3 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h3><h4 id="安装node-js和git"><a href="#安装node-js和git" class="headerlink" title="安装node.js和git"></a>安装node.js和git</h4><p>安装node.js和git，并分别将其配置，查看是否安装成功<br><img src="/images/first_version.png" alt="查看是否安装成功"></p>
-<h4 id="准备github帐号"><a href="#准备github帐号" class="headerlink" title="准备github帐号"></a>准备github帐号</h4>
+<h2 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h2><h3 id="安装node-js和git"><a href="#安装node-js和git" class="headerlink" title="安装node.js和git"></a>安装node.js和git</h3><p>安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">node.js</a>和<a href="https://git-scm.com/downloads/" target="_blank" rel="noopener">git</a>，并分别将其配置，出现下图表示安装成功<br><img src="/images/first/version.png" alt="img"></p>
+<h3 id="github准备"><a href="#github准备" class="headerlink" title="github准备"></a>github准备</h3><p>没有github帐号，去注册一个即可，如有github帐号，进行以下操作：<br>点击github右上角New repository新建仓库<br><img src="/images/first/add_repo.jpg" alt="img"></p>
+<p>新建仓库名称格式：your_username.github.io，方便后续访问主页，直接使用仓库名称便能访问。</p>
+<p><img src="/images/first/repo.jpg" alt="img"></p>
+<h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>为项目创建一个指定文件夹，进入文件夹中(例：我在F盘创建一个Hexo文件夹)<br><img src="/images/first/cmd_1.jpg" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo -g //输入此命令，安装Hexo</span><br></pre></td></tr></table></figure>
+<p>输入hexo -v,检查Hexo是否安装成功<br><img src="/images/first/cmd_2.jpg" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init //输入此命令，初始化文件</span><br></pre></td></tr></table></figure>
+<p>出现”Start blogging with Hexo!”意味着Hexo安装完成<br><img src="/images/first/cmd_3.jpg" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install //输入此命令，安装组件</span><br></pre></td></tr></table></figure>
+<p><img src="/images/first/cmd_4.jpg" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate //输入此命令，生成静态文件</span><br></pre></td></tr></table></figure>
+<p><img src="/images/first/cmd_5.jpg" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server //输入此命令，启动服务器</span><br></pre></td></tr></table></figure>
+<p><img src="/images/first/cmd_6.jpg" alt="img"></p>
+<p>浏览器中打开 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 页面，出现下图表示Hexo部署成功<br><img src="/images/first/success.jpg" alt="img"></p>
+<h2 id="Hexo与Github-page连接"><a href="#Hexo与Github-page连接" class="headerlink" title="Hexo与Github page连接"></a>Hexo与Github page连接</h2><p>1、设置git的user.name和user.email<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"your_username"</span></span><br><span class="line">git config --global user.email <span class="string">"your_email"</span></span><br></pre></td></tr></table></figure></p>
+<p>2、输入cd ~/.ssh，检查是否有.ssh的文件，数入ls，列出文件内容<br><img src="/images/first/git_1.jpg" alt="img"></p>
+
           
         
       
