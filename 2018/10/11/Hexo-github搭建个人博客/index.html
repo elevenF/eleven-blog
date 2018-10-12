@@ -100,7 +100,12 @@
 <meta property="og:image" content="http://yoursite.com/images/first/cmd_6.jpg">
 <meta property="og:image" content="http://yoursite.com/images/first/success.jpg">
 <meta property="og:image" content="http://yoursite.com/images/first/git_1.jpg">
-<meta property="og:updated_time" content="2018-10-12T07:34:02.785Z">
+<meta property="og:image" content="http://yoursite.com/images/first/git_2.jpg">
+<meta property="og:image" content="http://yoursite.com/images/first/git_ssh.jpg">
+<meta property="og:image" content="http://yoursite.com/images/first/git_3.jpg">
+<meta property="og:image" content="http://yoursite.com/images/first/git_4.jpg">
+<meta property="og:image" content="http://yoursite.com/images/first/newBlog.jpg">
+<meta property="og:updated_time" content="2018-10-12T08:07:18.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+github搭建个人博客">
 <meta name="twitter:description" content="关于HexoHexo是一个快速、简洁且高效的博客框架。Hexo使用Markdown(或其他渲染引擎)解析文章，几秒内即可利用不同主题生成静态页面。 Hexo特点 一键部署代码 渲染速度快 使用markdown编辑 博客主题丰富  安装准备安装node.js和git安装node.js和git，并分别将其配置，出现下图表示安装成功 github准备没有github帐号，去注册一个即可，如有github">
@@ -380,7 +385,16 @@
 <p><img src="/images/first/cmd_6.jpg" alt="img"></p>
 <p>浏览器中打开 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 页面，出现下图表示Hexo部署成功<br><img src="/images/first/success.jpg" alt="img"></p>
 <h2 id="Hexo与Github-page连接"><a href="#Hexo与Github-page连接" class="headerlink" title="Hexo与Github page连接"></a>Hexo与Github page连接</h2><p>1、设置git的user.name和user.email<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"your_username"</span></span><br><span class="line">git config --global user.email <span class="string">"your_email"</span></span><br></pre></td></tr></table></figure></p>
-<p>2、输入cd ~/.ssh，检查是否有.ssh的文件，数入ls，列出文件内容<br><img src="/images/first/git_1.jpg" alt="img"></p>
+<p>2、输入cd ~/.ssh，检查是否有.ssh的文件，数入ls，列出文件内容，存在途中所示内容，说明文件存在<br><img src="/images/first/git_1.jpg" alt="img"></p>
+<p>3、输入ssh-keygen -t rsa -C “your_email”，连续按回车，生成密钥，得到两个文件：id_rsa和id_rsa.pub（存储路径在下图括号中）<br><img src="/images/first/git_2.jpg" alt="img"></p>
+<p>4、输入ssh-add ~/.ssh/id_rsa，添加生成的ssh key到ssh-agent</p>
+<p>5、前往github，点击头像下的settings，添加ssh，新建New SSH key，将id_rsa.pub的内容复制进去<br><img src="/images/first/git_ssh.jpg" alt="img"></p>
+<p>6、输入ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>，检测ssh是否添加成功，出现hi，XXX，表示成功了<br><img src="/images/first/git_3.jpg" alt="img"></p>
+<p>7、配置Hexo，找到_config.yml文件，修改repo<br><img src="/images/first/git_4.jpg" alt="img"></p>
+<p>8、新建博文，执行cmd命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post <span class="string">"title"</span></span><br></pre></td></tr></table></figure></p>
+<p>9、文章部署前，安装扩展<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<p>10、生成并完成部署文章<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/first/newBlog.jpg" alt="img"></p>
 
       
     </div>
@@ -506,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
